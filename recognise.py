@@ -1,4 +1,3 @@
-
 import cv2
 import numpy as np
 from keras.models import load_model
@@ -8,39 +7,16 @@ import pyttsx3
     
 
 
-model = load_model('D:\\VSCode\\new_model6.h5') 
+model = load_model('D:\\VSCode\\transferlearning2.h5') 
 
 #Mapping the classes with gestures
-gestures = {
-    1:'A',
-    2:'B',
-    3:'C',
-    4:'D',
-    5:'E',
-    6:'F',
-    7:'G',
-    8:'H',
-    9:'I',
-    10:'K',
-    11:'L',
-    12:'M',
-    13:'N',
-    14:'O',
-    15:'P',
-    16:'Q',
-    17:'R',
-    18:'S',
-    19:'T',
-    20:'U',
-    21:'V',
-    22:'W',
-    23:'X',
-    24:'Y',
-}
+
+gestures={0:'1',1:'2',2:'3',3:'4',4:'5',5:'6',6:'7',7:'8',8:'9',9:'A',10:'B',11:'C',12:'D',13:'E',14:'F',15:'G',16:'H',17:'I',18:'J',19:'K',20:'L',21:'M',22:'N',23:'O',24:'P',
+        25:'Q',26:'R',27:'S',28:'T',29:'U',30:'V',31:'W',32:'X',33:'Y',34:'Z'}
 
 def predict(gesture):   #Method for predicting the gesture
-    img = cv2.resize(gesture, (50,50))
-    img = img.reshape(1,50,50,1)
+    img = cv2.resize(gesture, (200,200))
+    img = img.reshape(-1,200,200,3)
     img = img/255.0
     prd = model.predict(img)
     index = prd.argmax()    #Selecting Best Estimate
@@ -74,22 +50,22 @@ while True:
                 area = cv2.contourArea(temp)
                 if area > maxArea:
                     maxArea = area
-                    ci = i
+                    area_index= i
 
-            res = contours[ci]
-            hull = cv2.convexHull(res) 
+            result = contours[area_index]
+            hull = cv2.convexHull(result) 
 
             track_hand= np.zeros(crop_img.shape, np.uint8)    #Creates black frame for displaying the detected contours
-            cv2.drawContours(track_hand, [res], 0, (0, 255, 0), 2)
+            cv2.drawContours(track_hand, [result], 0, (0, 255, 0), 2)
             cv2.drawContours(track_hand, [hull], 0, (0, 0, 255), 3)
         cv2.imshow('output', track_hand)
         blackboard = np.zeros(frame.shape, dtype=np.uint8)
         
         if flag == True:
             wait=0
-            pred_text = predict(thresh)
+            pred_text = predict(crop_img)
             count_frames = 0
-            cv2.putText(blackboard, pred_text, (148, 180), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 4, (255, 255, 255))
+            cv2.putText(blackboard, pred_text, (100, 180), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 4, (255, 255, 255))
             wait+=1
             if wait==1:
                 engine = pyttsx3.init()
@@ -99,21 +75,19 @@ while True:
                 wait=0
             engine.runAndWait()
 
-        res = np.hstack((frame, blackboard)) #Concatening both frames
+        result= np.hstack((frame, blackboard)) #Concatening both frames
         
-        cv2.imshow("image", res)
-        cv2.imshow("hand", thresh)
+        cv2.imshow("Frame", result)
+        cv2.imshow("Thresholded", thresh)
         
         
     rval, frame = capture.read()
     keypress = cv2.waitKey(1)
-    if keypress == ord('c') or keypress==ord('C'):  #Press C/c for enabling translation mode
+    if keypress == ord('l') or keypress==ord('L'):  #Press C/c for enabling translation mode
         flag = True
  
-    if keypress == ord('q'):    #Press q to exit
+    if keypress == ord('q') or keypress==ord('Q'):    #Press q to exit
         break
 
 capture.release()
 cv2.destroyAllWindows()
-
-
