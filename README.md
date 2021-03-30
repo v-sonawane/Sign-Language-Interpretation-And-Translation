@@ -7,9 +7,9 @@
 3. [Problem Statement](#problem-statement)
 4. [Solution Proposal](#solution-proposal)
 5. [Objective](#objective)
-6. [Technology Stack](#tech-stack)
-7. [Use Case Diagram](#uml)
-8. 
+6. [Technology Stack](#technology-stack)
+7. [Use Case Diagram](#use-case-diagram)
+8. [Evaluation Metrics](#evaluation-metrics)
 ## Abstract
 <p>For the people with hearing or speech impairments, it is very difficult to communicate with others who aren’t familiar with the sign languages. Speech and hearing-impairedpeople form a significant part of the society. Also, they can  be  your  loved  ones,  friends,  family  or  colleagues. People who aren’t familiar with the sign languages cannot understand what the other person using sign  language wants  to  convey.This  leads  to  a  large  communication  gapbetween  two  equally  important  communities  of  the  society.  This  very communication gap then leads to various inequalities and lack of opportunities for such specially-abled people. </p>
 <p>To  reduce  this  communication  gap  &  in  turn  the  inequality,  we  have tried to come up with a solution.Our solution proposal for this issue is to create a  platform for  users  which  could  interpret  and  translate  the  sign  language gestures for them. So that the communication gap between community which isn’t aware of the sign languages and community which uses sign languages can be bridged.</p>
@@ -42,9 +42,19 @@
   <li>JavaScript</li>
   <li>HTML5</li>
   <li>CSS</li></ul></li></ul>
-<ul><li>Framework:<ul><li>OpenCV(v4.4.0)</li></ul>
+<ul><li>Framework:<ul><li>OpenCV(v4.4.0)</li>
   <li>Tensorflow(v2.3.1)</li>
   <li>Flask(v1.1.2))</li>
-  <li>Pyttsx3(v2.7))</li></ul>
-  </li></ul>
+  <li>Pyttsx3(v2.7))</li>
+</ul></li></ul>
+
+## Use Case Diagram
+
+![UML Diagram](https://github.com/v-sonawane/Unite-Mojo/blob/master/static/UML.PNG)
+
+![](https://github.com/v-sonawane/Unite-Mojo/blob/master/static/UML2.PNG)
+
+## Evaluation Metrics
+
+![](https://github.com/v-sonawane/Unite-Mojo/blob/master/static/EvaluationMetrics.PNG)
 
