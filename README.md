@@ -35,3 +35,16 @@
 ## Objective
 
 <p>Artificial Intelligence isever-evolving and has been widely applied in various   domains.   Our   web-application ‘UNITE   MOJO’is   based   on artificial intelligence  and  computer  vision  itself.  These  technologies  form the  core  of  this  project. Basically,we  have  used Artificial  Intelligence  to create  and  develop  a  model  which  could  recognize  the  sign  language gestures  and  Computer  Vision  for  working  on  live  inputvia webcam  and feeding it to the model. That’s the general perspective behind choosing these technologies.</p>
+
+## Technology Stack
+
+<ul><li>Programming Language:<ul><li>Python</li>
+  <li>JavaScript</li>
+  <li>HTML5</li>
+  <li>CSS</li></ul></li></ul>
+<ul><li>Framework:<ul><li>OpenCV(v4.4.0)</li></ul>
+  <li>Tensorflow(v2.3.1)</li>
+  <li>Flask(v1.1.2))</li>
+  <li>Pyttsx3(v2.7))</li></ul>
+  </li></ul>
+
