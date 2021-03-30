@@ -1,0 +1,249 @@
+body{
+  margin:0px;
+  margin-top: 0px;
+}
+h3{
+  color:#11999e;
+  font-family: 'Montserrat';
+  
+}
+.feature-row{
+  width:50%;
+  margin:70px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+.feature-image1{
+  width:27%;
+  height: 27%;
+  float: left;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+.feature-image2{
+  width:32%;
+  height: 32%;
+  float:right;
+  border-radius: 100%;
+  margin-left: 30px;
+}
+.feature-image3{
+  width:27%;
+  height: 27%;
+  float: left;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+
+.description{
+  line-height: 2;
+  font-family: 'MerriWeather', serif;
+}
+
+.intro{
+  margin-top: 77px;
+  background-color:#f6f6f6;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding-top: 50px;
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),opacity .3s .25s ease-out;
+  will-change: transform, opacity;
+}
+.intro.is-visible {
+  opacity: 1;
+}
+
+.product_name{
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    color: #413E66;
+    font-size: 2rem;
+}
+.myButton1 {	
+	border:0px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 2px #ffffff;
+  position: static;
+  right:80px;
+}
+.myButton1:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
+@keyframes mymove{
+  from {top: -20px;}
+  to {top: 0px;}
+}
+  
+
+.Get_Started {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #51e2f5 5%, #4fafd4 100%);
+	background-color:#51e2f5;
+	border-radius:4px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Varela Round', sans-serif;
+	font-size:20px;
+	font-weight:bold;
+  padding:12px 34px;
+  position: relative;
+  left:25px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #528ecc;
+  margin-top: 25px;
+}
+.Get_Started:hover {
+	background:linear-gradient(to bottom, #49a8ce 5%,#49a8ce 100%);
+	background-color:#49a8ce;
+}
+.Get_Started:active {
+	position:relative;
+	top:1px;
+}
+#nav-bar {
+  background-color: #f6f6f6; opacity: 1;  
+  overflow: hidden;    
+  padding-top:15px;
+  padding-left: 20px;
+  position:fixed;
+  margin-left:0px;
+  width:100%;
+  top:0px;
+  z-index: 4;
+  animation-name: fill;
+  animation-duration: 12s;
+}
+#nav-bar a {
+  background-color: #f6f6f6;
+  float: right;
+  display: block;
+  color: #413E66;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  position: relative;
+  top:5px
+}
+
+.introductory_text{
+    font-family: 'Inter', sans-serif;
+    color: #413E66;
+    padding-left:25px ;
+    padding-top: 25px;
+    padding-right: 25px ;
+    line-height: 3rem;
+    font-size: 2.5rem;
+}
+.introduction1{
+    height: 50%;
+    width: 50%;
+    float:left;
+}
+.introduction2{
+    float:right;
+    height: 50%;
+    width: 50%;
+}
+.img1{
+    height: 285px;
+    width: 450px;
+    padding-left: 25px;
+}
+.Question1{
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    color: #66bfbf;
+    padding-bottom: 10px;
+}
+.answer{
+    font-family: 'MerriWeather', serif;
+    width:110%;margin:auto;
+    margin-right: 0px;
+    padding-bottom: 20px;
+    line-height: 2rem;
+    word-spacing: 7px;
+    position: relative;
+    right: 30px;
+}
+hr{
+  border-style:dotted none none none;
+  border-color:grey;
+  border-width: 5px;
+  height: 0px;
+  width: 5%;
+}
+.info{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0;
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),opacity .3s .25s ease-out;
+    will-change: transform, opacity;
+}
+.info.is-visible {
+  opacity: 1;
+}
+.Features{
+  text-align: center;
+  margin:auto;
+  opacity: 0;
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),opacity .3s .25s ease-out;
+  will-change: transform, opacity;
+}
+.Features.is-visible{
+  opacity: 1;
+}
+.heading{
+  margin-left: 27%;
+  margin-right: 27%;
+  text-align: center;
+  margin-top: 100px;
+}
+.Instructions{
+  margin-left: 27%;
+  margin-right: 24%;
+}
+.testImage{
+  height: 300px;
+  width: 450px;
+  position: relative;
+  left: 124px;
+  border-radius: 30px;
+
+}
+.StartButton{
+  margin-left: 27%;
+  margin-right: 27%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.ongetName{
+  color: #51e2f5; 
+}
+.Thanks{
+  margin-left: 25%;
+  margin-right: 25% ;
+  margin-top:17%;
+  text-align: center;
+}
+.thanku{
+  font-family: 'Pacifico', cursive;
+  color: #66bfbf;
+  font-size: 83px;
+}
